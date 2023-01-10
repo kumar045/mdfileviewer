@@ -99,7 +99,7 @@ Shivam Kumar
 ## Change Log
 | Date | Version | Changed by | Change Description |
 |------|--------|--------|---------|
-| 2023-01-10 | 0.1 | Shivam Kumar | Created new instructions for creating a Cloud Source Repositories|
+| 2023-01-10 | 0.1 | Shivam Kumar | Created new instructions for creating a Cloud Source Repository|
 
 
 ## <h3 align="center"> All rights reserved. <h3/>
