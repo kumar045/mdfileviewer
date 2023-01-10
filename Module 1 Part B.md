@@ -340,7 +340,7 @@ You should see a response similar to the following error as an API key was not s
 2. Run the following curl command with the key query parameter and use the API key previously created to call the API:
 
 ```
-curl -sL -w "\n" $GATEWAY_URL/hello?key=$API_KEY
+curl -sL -w "\n" $GATEWAY_URL/time?key=$API_KEY
 ```
 
 If you do not have the API_KEY environment variable set you can get your API key from the left menu by navigating APIs & Services > Credentials. The key will be available under the API Keys section.
