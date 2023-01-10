@@ -31,9 +31,40 @@ ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net
 To set up the active account, run:
     $ gcloud config set account ACCOUNT
 `
-# Create a new repository
-1. Start a new session in Cloud Shell and run the following command to create a new Cloud Source Repository named gcp-capstone
+# Enable the required APIs
 
+1. In the Cloud Console, on the Navigation menu (Navigation menu icon) click APIs & Services > Library.
+
+2. Start typing "api gateway" in the Search bar, then select the API Gateway tile.
+
+3. Now click the Enable button on the next screen.
+
+#  Deploying an API backend
+
+API Gateway sits in front of a deployed backend service and handles all incoming requests. In this lab, API Gateway routes incoming calls to a Cloud Function backend named helloGET that contains the function shown below
+
+```
+exports.helloGET = (req, res) => {
+    res.send('Hello World!');
+};
+```
+1. In Cloud Console, clone the Cloud Function sample repository:
+
+```
+git clone https:// ...
+```
+
+2. Change to the directory that contains the Cloud Functions sample code:
+
+```
+cd functions/helloworld
+```
+
+3.To deploy the function with an HTTP trigger, run the following command in the directory containing your function:
+
+```
+gcloud functions deploy helloGET --runtime nodejs12 --trigger-http --allow-unauthenticated
+```
 
 
 Congratulations! You are now able to use API Gateway
