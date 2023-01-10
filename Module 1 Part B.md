@@ -289,8 +289,65 @@ securityDefinitions:
     in: "query"
 ```
 
+3. Run the following commands to replace the variables set in the last step in the OpenAPI spec file:
 
-Congratulations! You are now able to use API Gateway
+```
+sed -i "s/API_ID/${API_ID}/g" openapi2-functions2.yaml
+sed -i "s/PROJECT_ID/$PROJECT_ID/g" openapi2-functions2.yaml
+```
+
+4. Download the updated API spec file, you will use it to update the Gateway config in the next step:
+
+```
+cloudshell download $HOME/openapi2-functions2.yaml
+```
+
+5. Click Download.
+
+# Create and deploy a new API config to your existing gateway
+
+1. Open the API Gateway page in Cloud Console. (Click Navigation Menu > API Gateway.)
+
+2. Select your API from the list to view details.
+
+3. Select the Gateways tab.
+
+4. Select Hello Gateway from the list of available Gateways.
+
+5. Click on Edit at the top of the Gateway page.
+
+6. Under API Config change the drop down to Create new API config.
+
+7. Click Browse in the Upload an API Spec input box and select the openapi2-functions2.yaml file.
+
+8. Enter Hello Config for Display Name.
+
+9. Select Qwiklabs User Service Account for Select a Service Account.
+
+10. Click Update.
+
+# Testing calls using your API key
+
+1. To test using your API key run the following command:
+
+```
+export GATEWAY_URL=$(gcloud api-gateway gateways describe hello-gateway --location us-central1 --format json | jq -r .defaultHostname)
+curl -sL $GATEWAY_URL/time
+```
+
+You should see a response similar to the following error as an API key was not supplied with the curl call: UNAUTHENTICATED:Method doesn't allow unregistered callers (callers without established identity). Please use API Key or other form of API consumer identity to call this API.
+
+2. Run the following curl command with the key query parameter and use the API key previously created to call the API:
+
+```
+curl -sL -w "\n" $GATEWAY_URL/hello?key=$API_KEY
+```
+
+If you do not have the API_KEY environment variable set you can get your API key from the left menu by navigating APIs & Services > Credentials. The key will be available under the API Keys section.
+
+The response returned from the API should now be Current Time.
+
+Congratulations! You are now able to use API Gateway to secure your API 
 
 ## Author(s)
 Shivam Kumar
