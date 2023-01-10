@@ -1,3 +1,8 @@
+**Estimated time needed:** 45 minutes
+
+Welcome to the hands-on lab for **Cloud Source Repositories**. In this part, you will create a Google Cloud Source Repository with all code files .
+
+
 # Common Steps:
 
 # Activate Cloud Shell
