@@ -1,3 +1,7 @@
+**Estimated time needed:** 45 minutes
+
+Welcome to the hands-on lab for **Cloud Monitoring**. In this lab, you will check performance, uptime, and overall health of the Instance.
+
 # Common Steps:
 
 # Activate Cloud Shell
