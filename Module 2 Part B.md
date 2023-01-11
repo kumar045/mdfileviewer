@@ -225,6 +225,20 @@ Since you have just restarted your instance, it may take some minutes for the re
 3. Check your email account. You should see Cloud Monitoring Alerts.
 
 
+Congratulations! You are now able to use Cloud Monitoring to monitor performance, uptime, and overall health of the Instance.
+
+## Author(s)
+Shivam Kumar
+
+
+## Change Log
+| Date | Version | Changed by | Change Description |
+|------|--------|--------|---------|
+| 2023-01-11 | 0.1 | Shivam Kumar | Created new instructions for creating a API Gateway|
+
+
+## <h3 align="center"> All rights reserved. <h3/>
+
 
 
 
