@@ -234,7 +234,7 @@ Shivam Kumar
 ## Change Log
 | Date | Version | Changed by | Change Description |
 |------|--------|--------|---------|
-| 2023-01-11 | 0.1 | Shivam Kumar | Created new instructions for creating a API Gateway|
+| 2023-01-11 | 0.1 | Shivam Kumar | Created new instructions for Cloud Monitoring|
 
 
 ## <h3 align="center"> All rights reserved. <h3/>
