@@ -168,5 +168,67 @@ Name the dashboard Cloud Monitoring Qwik Start Dashboard.
 
 # View your logs
 
+Cloud Monitoring and Cloud Logging are closely integrated. Check out the logs for your lab.
+
+1. Select Navigation menu > Logging > Logs Explorer.
+
+2. Select the logs you want to see, in this case, you select the logs for the gcp-capstone instance you created:
+
+- Click on Resource.
+
+- Select VM Instance > gcp-capstone in the Resource drop-down menu.
+
+- Click Apply.
+
+- Leave the other fields with their default values.
+
+- Click the Stream logs.
+
+You see the logs for your VM instance.
+
+## Check out what happens when you start and stop the VM instance.
+
+To best see how Cloud Monitoring and Cloud Logging reflect VM instance changes, make changes to your instance in one browser window and then see what happens in the Cloud Monitoring, and then Cloud Logging windows.
+
+1. Open the Compute Engine window in a new browser window. Select Navigation menu > Compute Engine, right-click VM instances > Open link in new window.
+
+2. Move the Logs Viewer browser window next to the Compute Engine window. This makes it easier to view how changes to the VM are reflected in the logs
+
+3. In the Compute Engine window, select the gcp-capstone instance, click the three vertical dots at the top of the screen and then click Stop, and then confirm to stop the instance.
+
+It takes a few minutes for the instance to stop.
+
+4. Watch in the Logs View tab for when the VM is stopped.
+
+5. In the VM instance details window, click the three vertical dots at the top of the screen and then click Start/resume, and then confirm. It will take a few minutes for the instance to re-start. Watch the log messages to monitor the start up.
+
+# Check the uptime check results and triggered alerts
+
+1. In the Cloud Logging window, select Navigation menu > Monitoring > Uptime checks. This view provides a list of all active uptime checks, and the status of each in different locations.
+
+You will see Uptime Check listed. Since you have just restarted your instance, the regions are in a failed status. It may take up to 5 minutes for the regions to become active. Reload your browser window as necessary until the regions are active.
+
+2. Click the name of the uptime check, Uptime Check.
+
+Since you have just restarted your instance, it may take some minutes for the regions to become active. Reload your browser window as necessary.
+
+## Check if alerts have been triggered
+
+1. In the left menu, click Alerting.
+
+2. You see incidents and events listed in the Alerting window.
+
+3. Check your email account. You should see Cloud Monitoring Alerts.
+
+
+
+
+
+
+
+
+
+
+
 
 
