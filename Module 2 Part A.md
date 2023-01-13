@@ -98,7 +98,7 @@ To set up the active account, run:
 
 <img src="Node.js Connection.png" alt="Node.js Connection" style="height: 100px; width:100px" />
 
-16. All your Collections (Tables) that we create will be here
+16. All the Collections (Tables) that we create will be here
 
 <img src="Final.png" alt="Final" style="height: 100px; width:100px" />
 
