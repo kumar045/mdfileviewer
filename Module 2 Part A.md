@@ -31,6 +31,78 @@ ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net
 To set up the active account, run:
     $ gcloud config set account ACCOUNT
 `
+
+
+# Create a MongoDB Database using MongoDB Atlas
+
+1. Go to the link https://account.mongodb.com/account/register
+
+2. Fill in the registration form with your information and click Create your Atlas account
+
+<img src="Signup.png" alt="Sign Up" style="height: 100px; width:100px;"/>
+
+3. Verify your Email ID
+
+<img src="Verification.png" alt="Verification" style="height: 100px; width:100px;"/>
+
+4. After successfully verification
+
+<img src="Verify.png" alt="Verify" style="height: 100px; width:100px;"/>
+
+5. You will be redirected here
+
+<img src="Success.png" alt="Success" style="height: 100px; width:100px;"/>
+
+6. On the next page select as per as image, and click the green Continue button.
+
+<img src="Configuration.png" alt="Configuration" style="height: 100px; width:100px;"/>
+
+7. On the next page select as per as image, and click the green Create button.
+
+<img src="Next Configuration.png" alt="Next Configuration" style="height: 100px; width:100px;"/>
+
+8. Wait sometime it will create your Shared Cluster
+
+<img src="Shared Cluster.png" alt="Shared Cluster" style="height: 100px; width:100px;"/>
+
+9. On the next Create a Shared Cluster page select as per as image and region which is near to you and then scroll down and give the name of the Cluster as shown in the image and click the green Create Cluster button
+
+<img src="Advanced Configuration Part1.png" alt="Advanced Configuration" style="height: 100px; width:100px" />
+<img src="Advanced Configuration Part2.png" alt="Advanced Configuration" style="height: 100px; width:100px" />
+
+10. On the next page Create User with Username and Password by clicking on Create User button as shown in the image 
+
+<img src="User.png" alt="User" style="height: 100px; width:100px" />
+
+<img src="User Overview.png" alt="User Overview" style="height: 100px; width:100px" />
+
+11. Go to the Network Access page and click the Add IP Address button
+
+<img src="Network.png" alt="Network" style="height: 100px; width:100px" />
+
+12. On the next page select the ALLOW ACCESS FROM ANYWHERE and then click the green Confirm button and it will configure the newtwork with Status Active as shown in the image
+
+<img src="Network Confirmation.png" alt="Network Confirmation" style="height: 100px; width:100px" />
+
+<img src="Network Status.png" alt="Network Status" style="height: 100px; width:100px" />
+ 
+13. Go to the Database page and click the Connect button
+
+<img src="Database.png" alt="Database" style="height: 100px; width:100px" />
+
+14. And here click the Connect your application
+
+<img src="Database Connection.png" alt="Database Connection" style="height: 100px; width:100px" />
+
+15. And finally, select the Node.js Driver and Version and copy the connection string and keep it for later use and click the close button
+
+<img src="Node.js Connection.png" alt="Node.js Connection" style="height: 100px; width:100px" />
+
+16. All your Collections (Tables) that we create will be here
+
+<img src="Final.png" alt="Final" style="height: 100px; width:100px" />
+
+
 # Verifying Terraform installation
 
 Terraform comes pre-installed in Cloud Shell.
@@ -103,7 +175,7 @@ terraform plan
 terraform apply
 ```
 
-After this, Terraform is all done!
+After this, Terraform is all done and your VM is ready
 
 2. In the Google Cloud Console, on the Navigation menu, click Compute Engine > VM instances. The VM instances page opens and you'll see the VM instance you just created in the VM instances list.
 
@@ -113,19 +185,85 @@ After this, Terraform is all done!
 
 2. It will open a command line shell of your VM in the new tab
 
-3. Git clone all your backend code using command
+3. Install Git 
+
+```
+sudo apt-get update -y
+ 
+sudo apt-get install git -y
+```
+4. Install Node.js
+
+```
+sudo apt-get install -y curl
+sudo apt-get install -y make
+curl -sL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+sudo apt-get install -y nodejs
+```
+5. Open Port 
+
+```
+gcloud auth login
+gcloud config set project qwiklabs-gcp-04-808c237f1b07
+gcloud compute firewall-rules create fw-fe  --allow tcp:2000
+```
+
+5. Git clone all your backend code using command
 
 ```
 git clone https:// ...
 ```
-4. Navigate to the main directory 
+6. Navigate to the main directory 
 
 ```
 cd backend
 ```
 
+- Open server.js and paste Connection String that you copied earlier for MONGO DB Connection and replace <password> with your password
 
+```
+nano server.js
+```
 
+7. Install PM2 which is a advanced process manager for production Node.js applications
+
+```
+sudo npm install -g pm2
+```
+
+8. Configure PM2 to run your backend Node.js App
+
+```
+pm2 ecosystem
+vim ecosystem.config.js
+```
+- In the editor paste it
+
+```
+module.exports = {
+    apps: [
+        {
+            name: 'nodejs-app-backend',
+            script: './server.js',
+            env: {
+                NODE_ENV: 'production',
+                PORT: 2000,
+                HOST: '127.0.0.1'
+            }
+        }
+    ]
+};
+
+```
+9. Finally run PM2 server
+
+```
+pm2 start ./ecosystem.config.js
+sudo pm2 startup
+pm2 save
+```
+    
+10. Copy your external IP address of your VM and use it as the base END point for your API
 
 
 
