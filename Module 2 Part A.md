@@ -219,7 +219,7 @@ git clone https:// ...
 cd backend
 ```
 
-- Open server.js and paste Connection String that you copied earlier for MONGO DB Connection and replace <password> with your password
+- Open server.js and paste Connection String that you copied earlier for MONGO DB Connection and replace password with your password
 
 ```
 nano server.js
@@ -263,7 +263,7 @@ sudo pm2 startup
 pm2 save
 ```
     
-10. Copy your external IP address of your VM and use it as the base END point for your API
+10. Copy the external IP address of your VM and use it as the base END point for your API
 
 
 
