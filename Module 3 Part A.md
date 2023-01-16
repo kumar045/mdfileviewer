@@ -136,13 +136,12 @@ a. Enter a name for your trigger.
 
 b. Select the repository event to start your trigger.
 
-c. Select the repository that contains your source code and build config file.
+c. Select the gcp-capstone repository that contains your source code and build config file.
 
 d. Specify the regex for the branch or tag name that will start your trigger.
 
-e. Configuration: Choose the build config file you created previously.
+e. Configuration: Choose the build config file ` cloudbuild.yaml` you created previously.
 
-Configuration: Choose the build config file you created previously.
 
 
 
