@@ -57,7 +57,7 @@ After the scan completes, check the result of your scan in Security Command Cent
 
 4. In the Additional Information section, click the Source Properties tab:
 
-If we have any vulnerability in frontend app then You'll notice the vulnerability.
+If we have any vulnerability in frontend app then we'll notice the vulnerability.
 
 Congratulations! You are now able to scan the vulnerability using a Web Security Scanner scan
 
