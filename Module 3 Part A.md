@@ -144,8 +144,18 @@ e. Configuration: Choose the build config file ` cloudbuild.yaml` you created pr
 
 Click Create to save your build trigger.
 
+Anytime you push new code to your repository, you will automatically start a build and deploy on App Engine.
 
+3. After the application is deployed, open the app in your web browser with the following URL:
 
+```
+
+http://<PROJECT_ID>.appspot.com
+
+```
+Note:
+
+If you forgot your PROJECT_ID, run gcloud config list project from Cloud Shell.
 
 Congratulations! You are now able to deploy a front end on App Engine with continuous integration and continuous deployment
 
