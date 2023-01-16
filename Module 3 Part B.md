@@ -39,9 +39,9 @@ To set up the active account, run:
 
 The Starting URLs field is prepopulated with the URL of the app we deployed on the App Engine.
 
-4. Click Save to create the scan.
+3. Click Save to create the scan.
 
-5. Click Run to start scanning:
+4. Click Run to start scanning:
 
 Note: It takes some time to scan a frontend app that we have deployed.
 
