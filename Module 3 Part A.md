@@ -76,7 +76,7 @@ steps:
 timeout: '1600s'
 ```
 
-- We also need to replace the backend url with the backend url we deployed on the VM using terraform, and the API Gateway link to get current time
+- We also need to replace the backend url with the backend url of backend app that we deployed on the VM using terraform, and the API Gateway link to get current time
 
 3. Commit the files using the following Git commands
 
