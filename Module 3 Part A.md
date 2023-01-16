@@ -108,7 +108,7 @@ git push origin master
 
 # Deploying to the App Engine using CLoud Build for CI CD
 
-Your builds are carried out using the Cloud Build service on the infrastructure of the Google Cloud Platform. Cloud Build can import source code from Cloud Storage, Cloud Source Repositories, GitHub, or Bitbucket, execute a build to your specifications, that are used for CI CD pipeline and can be triggered by changes in source code repository 
+Builds are carried out using the Cloud Build service on the infrastructure of the Google Cloud Platform. Cloud Build can import source code from Cloud Storage, Cloud Source Repositories, GitHub, or Bitbucket, execute a build to your specifications, that are used for CI CD pipeline and can be triggered by changes in source code repository 
 
 - Enable the App Engine API
 
