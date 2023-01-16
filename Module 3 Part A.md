@@ -120,6 +120,30 @@ Grant the App Engine Admin role and Service Account User to the Cloud Build serv
      alt="Cloud Build Settings page"
       />
 
+2. Create a build trigger
+
+- Open the Triggers page in the Google Cloud console:
+
+- Select your project from the project selector drop-down menu at the top of the page.
+
+- Click Open.
+
+- Click Create trigger.
+
+- On the Create trigger page, enter the following settings:
+
+a. Enter a name for your trigger.
+
+b. Select the repository event to start your trigger.
+
+c. Select the repository that contains your source code and build config file.
+
+d. Specify the regex for the branch or tag name that will start your trigger.
+
+e. Configuration: Choose the build config file you created previously.
+
+Configuration: Choose the build config file you created previously.
+
 
 
 
