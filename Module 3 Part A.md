@@ -142,6 +142,7 @@ d. Specify the regex for the branch or tag name that will start your trigger.
 
 e. Configuration: Choose the build config file ` cloudbuild.yaml` you created previously.
 
+Click Create to save your build trigger.
 
 
 
