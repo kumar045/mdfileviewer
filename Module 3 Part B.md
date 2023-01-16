@@ -1,6 +1,6 @@
 **Estimated time needed:** 45 minutes
 
-Welcome to the hands-on lab for **Securing Web Applications with Web Security Scanner**. In this lab, you will identified the vulnerability using a Web Security Scanner scan.
+Welcome to the hands-on lab for **Securing Web Applications with Web Security Scanner**. In this lab, you will scan the vulnerability using a Web Security Scanner scan.
 
 
 # Common Steps:
@@ -31,9 +31,35 @@ ACCOUNT: student-01-xxxxxxxxxxxx@qwiklabs.net
 To set up the active account, run:
     $ gcloud config set account ACCOUNT
 `
+# Create and run the scan
 
+1. Click Navigation menu > App Engine > Security Scans.
 
-Congratulations! You are now able to identified the vulnerability using a Web Security Scanner scan
+2. Click + New Scan.
+
+The Starting URLs field is prepopulated with the URL of the app you just deployed.
+
+4. Click Save to create the scan.
+
+5. Click Run to start scanning:
+
+Note: It takes some time to scan a frontend app that we have deployed.
+
+# Check the results of the scan
+
+After the scan completes, check the result of your scan in Security Command Center:
+
+1. Click Navigation menu > Security > Security Command Center
+
+2. Then click on the Findings tab and view the findings by Category and select XSS near the bottom of the list.
+
+3. Click on one of the XSS findings to view its details.
+
+4. In the Additional Information section, click the Source Properties tab:
+
+If we have any vulnerability in frontend app then You'll notice the vulnerability.
+
+Congratulations! You are now able to scan the vulnerability using a Web Security Scanner scan
 
 ## Author(s)
 Shivam Kumar
