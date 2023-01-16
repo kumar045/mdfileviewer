@@ -1,6 +1,6 @@
 **Estimated time needed:** 45 minutes
 
-Welcome to the hands-on lab for **Front End Deployment with CICD**. In this lab, you will deploy a front end with continuous integration and continuous deployment.
+Welcome to the hands-on lab for **Front End Deployment with CICD**. In this lab, you will deploy a front end on App Engine with continuous integration and continuous deployment.
 
 # Common Steps:
 
@@ -105,7 +105,7 @@ git push origin master
 1. In the Console go to Navigation menu > Source Repositories
 
 
-Congratulations! You are now able to deploy a front end with continuous integration and continuous deployment
+Congratulations! You are now able to deploy a front end on App Engine with continuous integration and continuous deployment
 
 ## Author(s)
 Shivam Kumar
