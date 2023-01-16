@@ -104,6 +104,24 @@ git push origin master
 
 1. In the Console go to Navigation menu > Source Repositories
 
+# Deploying to the App Engine using CLoud Build for CI CD
+
+- Enable the App Engine API
+
+## Required IAM permissions
+
+Grant the App Engine Admin role and Service Account User to the Cloud Build service account:
+
+1. Open the Cloud Build Settings page:
+
+- Go to the App Engine under GCP Service and set the status of the App Engine Admin role and the Service Account User role to Enabled as shown in the image
+
+<img src="Cloud Build Settings page.jpg"
+     alt="Cloud Build Settings page"
+      />
+
+
+
 
 Congratulations! You are now able to deploy a front end on App Engine with continuous integration and continuous deployment
 
