@@ -49,6 +49,8 @@ Note: It takes some time to scan a frontend app that we have deployed.
 
 After the scan completes, check the result of your scan in Security Command Center:
 
+- If we have any vulnerability in frontend app then we'll notice the vulnerability.
+
 1. Click Navigation menu > Security > Security Command Center
 
 2. Then click on the Findings tab and view the findings by Category and select XSS near the bottom of the list.
@@ -57,7 +59,6 @@ After the scan completes, check the result of your scan in Security Command Cent
 
 4. In the Additional Information section, click the Source Properties tab:
 
-If we have any vulnerability in frontend app then we'll notice the vulnerability.
 
 Congratulations! You are now able to scan the vulnerability using a Web Security Scanner scan
 
