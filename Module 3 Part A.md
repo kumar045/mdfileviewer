@@ -76,6 +76,8 @@ steps:
 timeout: '1600s'
 ```
 
+- You also need to replace the backend url with the backend url you deployed on the VM using terraform, and the API Gateway link to get current time
+
 3. Commit the files using the following Git commands
 
 `
@@ -108,11 +110,15 @@ git push origin master
 
 - Enable the App Engine API
 
+[App Engine API](https://console.cloud.google.com/apis/library/appengine.googleapis.com?_ga=2.92569309.1154273686.1673849413-1685325301.1673849413&_gac=1.250146420.1673849413.CjwKCAiA5Y6eBhAbEiwA_2ZWIZjNG6PKtuHqB9Y06g7eQIP6bJMOYyeMt2kH8K9MQdstblrwnlH26RoCNWIQAvD_BwE)
+
 ## Required IAM permissions
 
 Grant the App Engine Admin role and Service Account User to the Cloud Build service account:
 
 1. Open the Cloud Build Settings page:
+
+[Cloud Build Settings](https://console.cloud.google.com/cloud-build/settings?_ga=2.63336943.1154273686.1673849413-1685325301.1673849413&_gac=1.127569535.1673849413.CjwKCAiA5Y6eBhAbEiwA_2ZWIZjNG6PKtuHqB9Y06g7eQIP6bJMOYyeMt2kH8K9MQdstblrwnlH26RoCNWIQAvD_BwE)
 
 - Go to the App Engine under GCP Service and set the status of the App Engine Admin role and the Service Account User role to Enabled as shown in the image
 
@@ -166,7 +172,7 @@ Shivam Kumar
 ## Change Log
 | Date | Version | Changed by | Change Description |
 |------|--------|--------|---------|
-| 2023-01-15 | 0.1 | Shivam Kumar | Created new instructions for creating a Cloud Source Repository|
+| 2023-01-15 | 0.1 | Shivam Kumar | Created new instructions for deploying a front end on App Engine with continuous integration and continuous deployment|
 
 
 ## <h3 align="center"> All rights reserved. <h3/>
