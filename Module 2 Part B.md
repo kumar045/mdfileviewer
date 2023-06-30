@@ -33,6 +33,13 @@ To set up the active account, run:
 
 # Create a Monitoring Metrics Scope
 
+- Granting IAM roles on your project for compute engine service account
+
+1. Monitoring Editor
+2. Monitoring Uptime Check Configurations Editor
+3. Monitoring AlertPolicy Editor
+4. Monitoring NotificationChannel Editor
+
 Set up a Monitoring Metrics Scope that's tied to your Google Cloud Project. The following steps create a new account that has a free trial of Monitoring.
 
 - In the Cloud Console, click Navigation menu Navigation menu icon > Monitoring.
@@ -78,7 +85,9 @@ Uptime checks verify that a resource is always accessible. For practice, create 
 
 Title: Uptime Check, then click Next.
 
-Protocol: HTTP
+Protocol: TCP
+
+Port 3000
 
 Resource Type: Instance
 
