@@ -67,5 +67,5 @@ The final step involves combining all processed data to create a comprehensive, 
 
 This final output provides:
 - A clear overview of all buildings in the area
-- Color-coded classification of different building types or attributes
+- Color-coded segmentation of different building types or attributes
 - A basis for further urban planning, development, or analysis tasks
